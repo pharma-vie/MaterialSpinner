@@ -3,7 +3,9 @@ package fr.ganfra.materialspinner.sample;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 import fr.ganfra.materialspinner.MaterialSpinner;
 import fr.ganfra.materialspinner.MaterialSpinnerAdapter;
@@ -47,6 +49,18 @@ public class MainActivity extends AppCompatActivity {
         spinner1 = (MaterialSpinner) findViewById(R.id.spinner1);
         spinner1.setPaddingSafe(0, 0, 0, 0);
         spinner1.setAdapter(adapter);
+
+        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this, "position = " + position + ", id = " + id, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                Toast.makeText(MainActivity.this, "nothing selected", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void initSpinnerOnlyHint() {
