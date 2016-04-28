@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="spinner_base_color">#32c08c</color>
+    <color name="spinner_hint_drop_down_color">#eec08c</color>
+    <color name="transparent">#00000000</color>
+</resources>
