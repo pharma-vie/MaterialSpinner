@@ -13,9 +13,18 @@ Base on [Material Design](https://github.com/ganfra/MaterialSpinner)
 
 ## Gradle Dependency
 Use this dependency in your build.gradle file to reference this library in your project
-
 ```groovy
-compile 'com.github.captain-miao:MaterialSpinner:1.1.3-SNAPSHOT'
+
+repositories {
+
+    maven { url 'https://oss.sonatype.org/content/repositories/releases' }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+}
+
+dependencies {
+
+    compile 'com.github.captain-miao:MaterialSpinner:1.1.3-SNAPSHOT'
+}
 ```
 
 If you use other libraries requiring nineoldandroids and appcompat-v7 like [MaterialEditText](https://github.com/rengwuxian/MaterialEditText/) make sure to exclude them :
